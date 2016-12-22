@@ -65,7 +65,7 @@ mkfs.vfat -n BOOT ${out}1
 mcopy -m -i ${out}1 $KERNEL/boot/uEnv.txt.in ::uEnv.txt
 mcopy -m -i ${out}1 $KERNEL/boot/Image.version ::
 mcopy -sm -i ${out}1 $KERNEL/boot/pine64 ::
-mcopy -m -i ${out}1 $INITRD ::initrd.img
+mcopy -m -i ${out}1 $DST_INITRD ::initrd.img
 #~ fi
 dd if=${out}1 conv=notrunc oflag=append bs=1M seek=$((part_position/1024)) of="$out"
 rm -f ${out}1

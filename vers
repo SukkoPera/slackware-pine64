@@ -16,7 +16,8 @@ LINUX_XZ=linux-pine64-${LINUX_VERSION}.tar.xz
 
 BOOT0=$WORKDIR/boot0.img
 UBOOT=$WORKDIR/uboot.img
-INITRD=$WORKDIR/initrd-armv7.img
+SRC_INITRD=$WORKDIR/initrd-armv7.img
+DST_INITRD=$WORKDIR/initrd.img
 KERNEL=$WORKDIR/kernel
 
 boot0_position=8     	# KiB
