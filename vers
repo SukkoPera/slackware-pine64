@@ -1,0 +1,27 @@
+WORKDIR=work
+TEMPDIR=temp
+SIMPLEIMAGE_VERSION=${SIMPLEIMAGE_VERSION:-"latest"}
+#LINUX_VERSION=${LINUX_VERSION:-"latest"}
+LINUX_VERSION="3.10.104-2-pine64-longsleep-113"
+SLACKWARE_VERSION=${SLACKWARE_VERSION:-"current"}
+SLACKWARE_MINIROOTFS_VERSION=${SLACKWARE_MINIROOTFS_VERSION:-"15Dec16"}
+
+SD_MOUNTPNT=/mnt/floppy
+
+SIMPLEIMAGE_XZ=simpleimage-pine64-${SIMPLEIMAGE_VERSION}.img.xz
+SIMPLEIMAGE=simpleimage.img
+
+MINIROOT_XZ=slack-${SLACKWARE_VERSION}-miniroot_${SLACKWARE_MINIROOTFS_VERSION}.tar.xz
+LINUX_XZ=linux-pine64-${LINUX_VERSION}.tar.xz
+
+BOOT0=$WORKDIR/boot0.img
+UBOOT=$WORKDIR/uboot.img
+INITRD=$WORKDIR/initrd-armv7.img
+KERNEL=$WORKDIR/kernel
+
+boot0_position=8     	# KiB
+boot0_size=32        	# KiB
+uboot_position=19096 	# KiB
+uboot_size=1384      	# KiB
+part_position=20480   # KiB
+boot_size=256         # MiB
