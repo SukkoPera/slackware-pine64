@@ -1,18 +1,7 @@
 #!/bin/sh
 #
-# Simple script to create a disk image which boots to U-Boot on Pine64.
-#
-# This script uses boot0 binary blob (as extracted from the Pine64 Android
-# image) together with a correctly prefixed U-Boot and A DOS partition table
-# to create a bootable SDcard image for the Pine64. If a Kernel and DTB is
-# found in ../kernel, it is added as well.
-#
-# U-Boot tree:
-# - https://github.com/longsleep/u-boot-pine64/tree/pine64-hacks
-#
-# Build the U-Boot tree and assemble it with ATF, SCP and FEX and put the
-# resulting u-boot-with-dtb.bin file into the ../build directory. The
-# u-boot-postprocess script provides an easy way to do all that.
+# Simple script to create a disk image which boots the Slackware installer on
+# Pine64.
 #
 
 . ./vers
