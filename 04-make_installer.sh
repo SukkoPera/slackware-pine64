@@ -17,7 +17,7 @@
 
 . ./vers
 
-#~ set -e
+set -e
 
 out="slackinst.img"
 
