@@ -24,9 +24,10 @@ mkdir $tmpdir
 )
 rm -rfv $tmpdir/lib/modules/*
 fakeroot -i $fakeroot_savefile -s $fakeroot_savefile cp -rv $KERNEL/lib/modules/* $tmpdir/lib/modules/
-rm $tmpdir/lib/modules/3.10.104-2-pine64-longsleep/build
+#~ rm $tmpdir/lib/modules/3.10.104-2-pine64-longsleep/build
+rm $tmpdir/lib/modules/*/build
 depmod -a -b $tmpdir $(basename $tmpdir/lib/modules/*)
 ( \
 	cd $tmpdir; \
-	find . | fakeroot -i ../$(basename $fakeroot_savefile) cpio -o -H newc | gzip -c > ../$(basename $DST_INITRD); \
+	find . | fakeroot -i ../$(basename $fakeroot_savefile) cpio -o -H newc | gzip -c --best > ../$(basename $DST_INITRD); \
 )
